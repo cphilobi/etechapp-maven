@@ -21,7 +21,7 @@ pipeline {
 		}
 		stage ('4-Deploy') {
 		     steps {
-			      sh '/home/ubuntu/mavenrepo/etechapp-maven/MavenEnterpriseApp-web/deploywar.sh'
+			      sh 'bash /home/ubuntu/mavenrepo/etechapp-maven/MavenEnterpriseApp-web/deploywar.sh'
 		     }
 		}
 	}
