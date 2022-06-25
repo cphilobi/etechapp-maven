@@ -6,7 +6,7 @@ pipeline
 	stages {
 		stage ('1-GitClone') {
 			steps {
-				sh 'clone repo'
+				checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/cphilobi/etechapp-maven.git']]])
 			}
 		}
 		stage ('2-CleanWS') {
