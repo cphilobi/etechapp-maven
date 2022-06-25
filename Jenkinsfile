@@ -1,4 +1,4 @@
-pipeline
+pipeline {
      agent any
 	 tools {
 	     maven 'maven'
@@ -11,7 +11,7 @@ pipeline
 		}
 		stage ('2-CleanWS') {
 			steps {
-				sh 'mva clean'
+				sh 'mvn clean'
 			}
 		}
 		stage ('3-MavenBuild') {
